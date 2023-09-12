@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 section {
@@ -12,16 +15,132 @@ section {
     background-position: center;
     background-repeat: no-repeat;
 
+
 }
 
 .navbar {
     width: 100%;
-    height: 70px;
+    height: 90px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    color: #a8a8a8;
+    padding: 15px 0px;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    backdrop-filter: blur(15px);
+    z-index: 10;
+
 }
 
 .navbar img {
     width: 50px;
+    top: 15px;
+    margin-left: 200px;
+}
+
+section p {
+    font-weight: 300;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .3s ease;
+
+}
+
+section p:hover {
+    color: #fff;
+}
+
+.bx-menu {
+    font-size: 20px;
+    font-weight: 100;
+    color: #a8a8a8;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.bx-menu:hover {
+    color: #fff;
+}
+
+.sideBar {
+    position: fixed;
+    height: 100vh;
+    width: 360px;
+    left: -360px;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    font-family: 'Poppins', sans-serif;
+    right: 0;
+    transition: all .4s ease;
+    z-index: 9999;
+
+}
+
+
+.sideBar a {
+    opacity: .6;
+    transition: all .3s ease;
+    font-weight: 200;
+}
+
+.sideBar a:hover {
+
+    opacity: 1;
+    transform: scale(1.1);
+
+}
+
+.sideBar .btn {
+    font-size: 35px;
+    border: none;
+    background: transparent;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin: 20px 20px;
+    color: #fff;
+    transition: all .5s ease-in-out;
+
+}
+
+.btn:hover {
+    rotate: 180deg;
+}
+
+.topSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 50px;
+
+}
+
+.topSide a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.bottomSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.active {
+    left: 0;
+}
+
+.bottomSide {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 50px;
+
+}
+
+.bottomSide a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
 }
