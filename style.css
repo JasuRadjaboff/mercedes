@@ -28,8 +28,9 @@ section {
     padding: 15px 0px;
     font-family: 'Poppins', sans-serif;
     position: fixed;
-    backdrop-filter: blur(15px);
+
     z-index: 10;
+    transition: border-bottom .3s ease;
 
 }
 
@@ -91,15 +92,17 @@ section p:hover {
 
 }
 
-.sideBar .btn {
-    font-size: 35px;
-    border: none;
+.sideBar button.btn {
+    font-size: 24px;
+    border: 0;
     background: transparent;
-    font-family: sans-serif;
-    font-weight: 100;
     margin: 20px 20px;
     color: #fff;
     transition: all .5s ease-in-out;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: 100;
+
 
 }
 
@@ -143,4 +146,35 @@ section p:hover {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.bDblur {
+    display: block;
+    opacity: 1;
+}
+
+.changedNav {
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    box-shadow: 3px 0px 7px rgba(0, 0, 0, .2);
+
+
+}
+
+.changedNav img {
+    transition: rotate 1s ease;
+}
+
+.changedNav img {
+    rotate: 360deg;
 }
